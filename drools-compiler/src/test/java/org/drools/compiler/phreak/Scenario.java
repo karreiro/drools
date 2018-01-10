@@ -368,4 +368,87 @@ public class Scenario {
         }
     }
 
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        final Scenario scenario = (Scenario) o;
+
+        if (testLeftMemory != scenario.testLeftMemory) {
+            return false;
+        }
+        if (testRightMemory != scenario.testRightMemory) {
+            return false;
+        }
+        if (phreakNode != null ? !phreakNode.equals(scenario.phreakNode) : scenario.phreakNode != null) {
+            return false;
+        }
+        if (betaNode != null ? !betaNode.equals(scenario.betaNode) : scenario.betaNode != null) {
+            return false;
+        }
+        if (sinkNode != null ? !sinkNode.equals(scenario.sinkNode) : scenario.sinkNode != null) {
+            return false;
+        }
+        if (bm != null ? !bm.equals(scenario.bm) : scenario.bm != null) {
+            return false;
+        }
+        if (wm != null ? !wm.equals(scenario.wm) : scenario.wm != null) {
+            return false;
+        }
+        if (leftTuples != null ? !leftTuples.equals(scenario.leftTuples) : scenario.leftTuples != null) {
+            return false;
+        }
+        if (rightRuples != null ? !rightRuples.equals(scenario.rightRuples) : scenario.rightRuples != null) {
+            return false;
+        }
+        if (expectedResultBuilder != null ? !expectedResultBuilder.equals(scenario.expectedResultBuilder) : scenario.expectedResultBuilder != null) {
+            return false;
+        }
+        if (actualResultLeftTuples != null ? !actualResultLeftTuples.equals(scenario.actualResultLeftTuples) : scenario.actualResultLeftTuples != null) {
+            return false;
+        }
+        if (previousResultTuples != null ? !previousResultTuples.equals(scenario.previousResultTuples) : scenario.previousResultTuples != null) {
+            return false;
+        }
+        if (preStagedBuilders != null ? !preStagedBuilders.equals(scenario.preStagedBuilders) : scenario.preStagedBuilders != null) {
+            return false;
+        }
+        if (postStagedBuilders != null ? !postStagedBuilders.equals(scenario.postStagedBuilders) : scenario.postStagedBuilders != null) {
+            return false;
+        }
+        if (leftMemory != null ? !leftMemory.equals(scenario.leftMemory) : scenario.leftMemory != null) {
+            return false;
+        }
+        return rightMemory != null ? rightMemory.equals(scenario.rightMemory) : scenario.rightMemory == null;
+    }
+
+    @Override
+    public int hashCode() {
+
+        final int prime = 31;
+
+        int result = phreakNode != null ? phreakNode.hashCode() : 0;
+        result = prime * result + (betaNode != null ? betaNode.hashCode() : 0);
+        result = prime * result + (sinkNode != null ? sinkNode.hashCode() : 0);
+        result = prime * result + (bm != null ? bm.hashCode() : 0);
+        result = prime * result + (wm != null ? wm.hashCode() : 0);
+        result = prime * result + (leftTuples != null ? leftTuples.hashCode() : 0);
+        result = prime * result + (rightRuples != null ? rightRuples.hashCode() : 0);
+        result = prime * result + (expectedResultBuilder != null ? expectedResultBuilder.hashCode() : 0);
+        result = prime * result + (actualResultLeftTuples != null ? actualResultLeftTuples.hashCode() : 0);
+        result = prime * result + (previousResultTuples != null ? previousResultTuples.hashCode() : 0);
+        result = prime * result + (preStagedBuilders != null ? preStagedBuilders.hashCode() : 0);
+        result = prime * result + (postStagedBuilders != null ? postStagedBuilders.hashCode() : 0);
+        result = prime * result + (leftMemory != null ? leftMemory.hashCode() : 0);
+        result = prime * result + (rightMemory != null ? rightMemory.hashCode() : 0);
+        result = prime * result + (testLeftMemory ? 1 : 0);
+        result = prime * result + (testRightMemory ? 1 : 0);
+
+        return result;
+    }
 }

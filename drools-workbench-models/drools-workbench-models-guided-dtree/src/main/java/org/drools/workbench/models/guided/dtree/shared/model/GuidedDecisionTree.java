@@ -77,4 +77,46 @@ public class GuidedDecisionTree implements HasImports,
     public List<GuidedDecisionTreeParserError> getParserErrors() {
         return errors;
     }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        final GuidedDecisionTree that = (GuidedDecisionTree) o;
+
+        if (imports != null ? !imports.equals(that.imports) : that.imports != null) {
+            return false;
+        }
+        if (packageName != null ? !packageName.equals(that.packageName) : that.packageName != null) {
+            return false;
+        }
+        if (treeName != null ? !treeName.equals(that.treeName) : that.treeName != null) {
+            return false;
+        }
+        if (root != null ? !root.equals(that.root) : that.root != null) {
+            return false;
+        }
+        return errors != null ? errors.equals(that.errors) : that.errors == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        result = imports != null ? imports.hashCode() : 0;
+        result = ~~result;
+        result = 31 * result + (packageName != null ? packageName.hashCode() : 0);
+        result = ~~result;
+        result = 31 * result + (treeName != null ? treeName.hashCode() : 0);
+        result = ~~result;
+        result = 31 * result + (root != null ? root.hashCode() : 0);
+        result = ~~result;
+        result = 31 * result + (errors != null ? errors.hashCode() : 0);
+        result = ~~result;
+        return result;
+    }
 }
