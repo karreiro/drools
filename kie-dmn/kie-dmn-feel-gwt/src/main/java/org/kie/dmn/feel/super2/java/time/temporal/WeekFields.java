@@ -2,8 +2,8 @@
 package org.kie.dmn.feel.super2.java.time.temporal;
 
 import java.io.Serializable;
-import java.time.DayOfWeek;
-import java.time.temporal.TemporalField;
+
+import org.kie.dmn.feel.super2.java.time.DayOfWeek;
 
 public final class WeekFields implements Serializable {
 

@@ -1,14 +1,15 @@
 
 package org.kie.dmn.feel.super2.java.time;
 
-import java.time.format.TextStyle;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.ValueRange;
 import java.util.Locale;
+
+import org.kie.dmn.feel.super2.java.time.format.TextStyle;
+import org.kie.dmn.feel.super2.java.time.temporal.Temporal;
+import org.kie.dmn.feel.super2.java.time.temporal.TemporalAccessor;
+import org.kie.dmn.feel.super2.java.time.temporal.TemporalAdjuster;
+import org.kie.dmn.feel.super2.java.time.temporal.TemporalField;
+import org.kie.dmn.feel.super2.java.time.temporal.TemporalQuery;
+import org.kie.dmn.feel.super2.java.time.temporal.ValueRange;
 
 public enum Month implements TemporalAccessor,
                              TemporalAdjuster {

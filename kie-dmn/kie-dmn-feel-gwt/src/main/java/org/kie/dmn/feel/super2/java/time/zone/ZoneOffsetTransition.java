@@ -17,13 +17,14 @@
 package org.kie.dmn.feel.super2.java.time.zone;
 
 import java.io.Serializable;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+
+import org.kie.dmn.feel.super2.java.time.Duration;
+import org.kie.dmn.feel.super2.java.time.Instant;
+import org.kie.dmn.feel.super2.java.time.LocalDateTime;
+import org.kie.dmn.feel.super2.java.time.ZoneOffset;
 
 public final class ZoneOffsetTransition
-        implements Comparable<java.time.zone.ZoneOffsetTransition>,
+        implements Comparable<ZoneOffsetTransition>,
                    Serializable {
 
     public Instant getInstant() {
@@ -66,7 +67,7 @@ public final class ZoneOffsetTransition
         return true;
     }
 
-    public int compareTo(final java.time.zone.ZoneOffsetTransition transition) {
+    public int compareTo(final ZoneOffsetTransition transition) {
         return 0;
     }
 

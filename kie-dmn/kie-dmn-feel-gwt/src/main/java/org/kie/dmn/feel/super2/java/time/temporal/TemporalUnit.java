@@ -1,7 +1,7 @@
 
 package org.kie.dmn.feel.super2.java.time.temporal;
 
-import java.time.Duration;
+import org.kie.dmn.feel.super2.java.time.Duration;
 
 public interface TemporalUnit {
 

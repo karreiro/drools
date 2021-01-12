@@ -1,13 +1,10 @@
 
 package org.kie.dmn.feel.super2.java.time.temporal;
 
-import java.time.format.ResolverStyle;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalUnit;
-import java.time.temporal.ValueRange;
 import java.util.Locale;
 import java.util.Map;
+
+import org.kie.dmn.feel.super2.java.time.format.ResolverStyle;
 
 public interface TemporalField {
 

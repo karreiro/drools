@@ -1,25 +1,21 @@
 
 package org.kie.dmn.feel.super2.java.time.temporal;
 
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalUnit;
-import java.time.temporal.ValueRange;
 import java.util.Locale;
 
-import static java.time.temporal.ChronoUnit.DAYS;
-import static java.time.temporal.ChronoUnit.ERAS;
-import static java.time.temporal.ChronoUnit.FOREVER;
-import static java.time.temporal.ChronoUnit.HALF_DAYS;
-import static java.time.temporal.ChronoUnit.HOURS;
-import static java.time.temporal.ChronoUnit.MICROS;
-import static java.time.temporal.ChronoUnit.MILLIS;
-import static java.time.temporal.ChronoUnit.MINUTES;
-import static java.time.temporal.ChronoUnit.MONTHS;
-import static java.time.temporal.ChronoUnit.NANOS;
-import static java.time.temporal.ChronoUnit.SECONDS;
-import static java.time.temporal.ChronoUnit.WEEKS;
-import static java.time.temporal.ChronoUnit.YEARS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.DAYS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.ERAS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.FOREVER;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.HALF_DAYS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.HOURS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.MICROS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.MILLIS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.MINUTES;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.MONTHS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.NANOS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.SECONDS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.WEEKS;
+import static org.kie.dmn.feel.super2.java.time.temporal.ChronoUnit.YEARS;
 
 public enum ChronoField implements TemporalField {
 
@@ -67,7 +63,7 @@ public enum ChronoField implements TemporalField {
         return null;
     }
 
-    public java.time.temporal.TemporalUnit getBaseUnit() {
+    public TemporalUnit getBaseUnit() {
         return null;
     }
 
@@ -95,11 +91,11 @@ public enum ChronoField implements TemporalField {
         return 0;
     }
 
-    public boolean isSupportedBy(java.time.temporal.TemporalAccessor temporal) {
+    public boolean isSupportedBy(TemporalAccessor temporal) {
         return true;
     }
 
-    public ValueRange rangeRefinedBy(java.time.temporal.TemporalAccessor temporal) {
+    public ValueRange rangeRefinedBy(TemporalAccessor temporal) {
         return null;
     }
 

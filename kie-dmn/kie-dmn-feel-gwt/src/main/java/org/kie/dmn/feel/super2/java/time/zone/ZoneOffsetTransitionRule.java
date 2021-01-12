@@ -17,11 +17,11 @@
 package org.kie.dmn.feel.super2.java.time.zone;
 
 import java.io.Serializable;
-import java.time.DayOfWeek;
-import java.time.LocalTime;
-import java.time.Month;
-import java.time.ZoneOffset;
-import java.time.zone.ZoneOffsetTransition;
+
+import org.kie.dmn.feel.super2.java.time.DayOfWeek;
+import org.kie.dmn.feel.super2.java.time.LocalTime;
+import org.kie.dmn.feel.super2.java.time.Month;
+import org.kie.dmn.feel.super2.java.time.ZoneOffset;
 
 public final class ZoneOffsetTransitionRule implements Serializable {
 

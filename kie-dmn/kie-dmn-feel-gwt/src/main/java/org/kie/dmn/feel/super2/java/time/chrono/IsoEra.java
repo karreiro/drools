@@ -29,7 +29,7 @@ public enum IsoEra implements Era {
     BCE,
     CE;
 
-    public static java.time.chrono.IsoEra of(int isoEra) {
+    public static IsoEra of(int isoEra) {
         return null;
     }
 
