@@ -50,11 +50,11 @@ import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.feel.runtime.Range;
 import org.kie.dmn.feel.runtime.Range.RangeBoundary;
 import org.kie.dmn.model.api.GwtIncompatible;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class EvalHelper {
-    public static final Logger LOG = LoggerFactory.getLogger( EvalHelper.class );
+//    public static final Logger LOG = LoggerFactory.getLogger( EvalHelper.class );
 
     @GwtIncompatible
     private static final Map<String, Method> accessorCache = new ConcurrentHashMap<>();
@@ -452,7 +452,7 @@ public class EvalHelper {
      */
     @GwtIncompatible
     public static Method getGenericAccessor(Class<?> clazz, String field) {
-        LOG.trace( "getGenericAccessor({}, {})", clazz, field );
+//        LOG.trace( "getGenericAccessor({}, {})", clazz, field );
 
         String accessorQualifiedName = new StringBuilder(clazz.getCanonicalName())
 			.append(".").append(field).toString();
@@ -480,7 +480,7 @@ public class EvalHelper {
      */
     @GwtIncompatible
     public static Method getAccessor(Class<?> clazz, String field) {
-        LOG.trace( "getAccessor({}, {})", clazz, field );
+//        LOG.trace( "getAccessor({}, {})", clazz, field );
         try {
             return clazz.getMethod( "get" + ucFirst( field ) );
         } catch ( NoSuchMethodException e ) {

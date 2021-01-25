@@ -43,11 +43,11 @@ import org.kie.dmn.feel.lang.types.SymbolTable;
 import org.kie.dmn.feel.lang.types.VariableSymbol;
 import org.kie.dmn.feel.runtime.events.UnknownVariableErrorEvent;
 import org.kie.dmn.feel.util.EvalHelper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class ParserHelper {
-    public static final Logger LOG = LoggerFactory.getLogger(ParserHelper.class);
+//    public static final Logger LOG = LoggerFactory.getLogger(ParserHelper.class);
 
     private FEELEventListenersManager eventsManager;
     private SymbolTable   symbols      = new SymbolTable();
@@ -73,12 +73,12 @@ public class ParserHelper {
     }
 
     public void pushScope() {
-        LOG.trace("pushScope()");
+//        LOG.trace("pushScope()");
         currentScope = new ScopeImpl( currentName.peek(), currentScope );
     }
 
     public void pushScope(Type type) {
-        LOG.trace("pushScope()");
+//        LOG.trace("pushScope()");
         currentScope = new ScopeImpl( currentName.peek(), currentScope, type );
     }
 
@@ -87,18 +87,18 @@ public class ParserHelper {
     }
 
     public void pushTypeScope() {
-        LOG.trace("pushTypeScope()");
+//        LOG.trace("pushTypeScope()");
         Scope newTypeScope = typeRegistry.getItemDefScope(currentScope);
         currentScope = newTypeScope;
     }
 
     public void popScope() {
-        LOG.trace("popScope()");
+//        LOG.trace("popScope()");
         currentScope = currentScope.getParentScope();
     }
 
     public void pushName( String name ) {
-        LOG.trace("pushName() {}", name);
+//        LOG.trace("pushName() {}", name);
         this.currentName.push( name );
     }
 
@@ -115,7 +115,7 @@ public class ParserHelper {
     }
 
     public void popName() {
-        LOG.trace("popName()");
+//        LOG.trace("popName()");
         this.currentName.pop();
     }
 
@@ -124,7 +124,7 @@ public class ParserHelper {
     }
 
     public void recoverScope( String name ) {
-//        LOG.trace("[{}] recoverScope( name: {}) with currentScope: {}", this.currentScope.getName(), name, currentScope); TODO Maybe this line should just be removed?
+////        LOG.trace("[{}] recoverScope( name: {}) with currentScope: {}", this.currentScope.getName(), name, currentScope); TODO Maybe this line should just be removed?
         Scope s = this.currentScope.getChildScopes().get( name );
         if( s != null ) {
             currentScope = s;
@@ -145,7 +145,7 @@ public class ParserHelper {
                 for ( Map.Entry<String, Type> f : type.getFields().entrySet() ) {
                     this.currentScope.define(new VariableSymbol( f.getKey(), f.getValue() ));
                 }
-                LOG.trace(".. PUSHED, scope name {} with symbols {}", this.currentName.peek(), this.currentScope.getSymbols());
+//                LOG.trace(".. PUSHED, scope name {} with symbols {}", this.currentName.peek(), this.currentScope.getSymbols());
             } else if (resolved != null && scopeType instanceof SimpleType) {
                 BuiltInType resolvedBIType = null;
                 if (scopeType instanceof BuiltInType) {
@@ -217,7 +217,7 @@ public class ParserHelper {
     }
 
     public void dismissScope() {
-        LOG.trace("dismissScope()");
+//        LOG.trace("dismissScope()");
         if ( currentScope.getType() != null && currentScope.getType().equals(BuiltInType.UNKNOWN) ) {
             disableDynamicResolution();
         }
@@ -265,7 +265,7 @@ public class ParserHelper {
     }
 
     public void defineVariable(String variable, Type type) {
-        LOG.trace("defining custom type symbol.");
+//        LOG.trace("defining custom type symbol.");
         VariableSymbol var = new VariableSymbol( variable, type );
         this.currentScope.define( var );
     }
