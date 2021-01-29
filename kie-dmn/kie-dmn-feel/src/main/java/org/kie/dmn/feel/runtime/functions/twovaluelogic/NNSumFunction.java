@@ -27,6 +27,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NNSumFunction
         extends BaseFEELFunction {
 

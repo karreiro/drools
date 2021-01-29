@@ -24,6 +24,7 @@ import org.kie.dmn.feel.runtime.functions.BaseFEELFunction;
 import org.kie.dmn.feel.runtime.functions.FEELFnResult;
 import org.kie.dmn.feel.runtime.functions.ParameterName;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class FinishesFunction
         extends BaseFEELFunction {
 

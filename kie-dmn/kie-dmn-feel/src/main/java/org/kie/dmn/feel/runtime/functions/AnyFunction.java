@@ -22,6 +22,7 @@ import org.kie.dmn.api.feel.runtime.events.FEELEvent.Severity;
 import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 import org.kie.dmn.feel.util.TypeUtil;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class AnyFunction
         extends BaseFEELFunction {
 

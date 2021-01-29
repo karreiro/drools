@@ -21,6 +21,7 @@ import java.util.List;
 import org.kie.dmn.feel.lang.EvaluationContext;
 import org.kie.dmn.feel.lang.ast.BaseNode;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class CustomFEELFunction extends AbstractCustomFEELFunction<BaseNode> {
 
     public CustomFEELFunction(String name, List<Param> parameters, BaseNode body, EvaluationContext evaluationContext) {

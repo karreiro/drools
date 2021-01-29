@@ -20,6 +20,7 @@ package org.kie.dmn.feel.util;
  * Utility class for I18N messages.
  *
  */
+// @org.kie.dmn.model.api.GwtIncompatible
 public final class Msg {
 
     public static final Message0 NULL_OR_UNKNOWN_OPERATOR = new Message0("Null or unknown operator");
@@ -70,11 +71,11 @@ public final class Msg {
     public static String createMessage( Message4 message, Object p1, Object p2, Object p3, Object p4) {
         return Msg.buildMessage(message, p1, p2, p3, p4);
     }
-    
+
     private static String buildMessage( Message message, Object... params ) {
         return String.format( message.getMask(), params );
     }
-    
+
     public static interface Message {
         String getMask();
     }
