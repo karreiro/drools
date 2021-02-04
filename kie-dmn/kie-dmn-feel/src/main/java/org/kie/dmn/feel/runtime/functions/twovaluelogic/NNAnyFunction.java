@@ -28,6 +28,7 @@ import java.util.List;
 /**
  * An implementation of the any() function that ignores nulls
  */
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NNAnyFunction
         extends BaseFEELFunction {
 

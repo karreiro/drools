@@ -23,6 +23,7 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.parser.feel11.FEEL_1_1Parser.AtLiteralContext;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ASTBuilderFactory {
 
     public static NumberNode newNumberNode(ParserRuleContext ctx) {

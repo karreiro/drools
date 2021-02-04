@@ -25,6 +25,7 @@ import org.kie.dmn.feel.runtime.functions.ParameterName;
 import java.util.Arrays;
 import java.util.List;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NNMaxFunction
         extends BaseFEELFunction {
 

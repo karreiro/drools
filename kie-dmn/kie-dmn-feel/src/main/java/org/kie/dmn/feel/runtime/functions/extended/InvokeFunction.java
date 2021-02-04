@@ -35,6 +35,7 @@ import org.kie.dmn.feel.runtime.functions.ParameterName;
  * to import Business Knowledge Model (BKM) nodes and Decision Service in order to be invoked from another model
  */
 @Deprecated
+// @org.kie.dmn.model.api.GwtIncompatible
 public class InvokeFunction extends BaseFEELFunction {
 
     public InvokeFunction() {

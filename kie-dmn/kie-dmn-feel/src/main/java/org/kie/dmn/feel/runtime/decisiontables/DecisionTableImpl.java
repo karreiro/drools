@@ -45,6 +45,7 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.stream.Collectors.toMap;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class DecisionTableImpl implements DecisionTable {
     private static final Logger logger = LoggerFactory.getLogger( DecisionTableImpl.class );
 
