@@ -61,6 +61,9 @@ public interface Logger {
     default void debug(String s, TemporalField tf, long l, TextStyle ts, Locale lc) {
     }
 
+    default void debug(String s, CharSequence cs, int i, Object obj) {
+    }
+
     default void debug(String format, Object arg1, Object arg2, Object arg3) {
     }
 
