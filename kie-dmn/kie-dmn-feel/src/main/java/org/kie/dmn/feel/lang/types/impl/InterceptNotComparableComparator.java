@@ -19,6 +19,7 @@ package org.kie.dmn.feel.lang.types.impl;
 import java.time.Period;
 import java.util.Comparator;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class InterceptNotComparableComparator implements Comparator<Object> {
 
     @Override

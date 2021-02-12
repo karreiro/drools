@@ -30,6 +30,7 @@ import static org.kie.dmn.feel.lang.types.BuiltInType.justNull;
  * that converts FEEL objects into it's string representation
  * and vice versa
  */
+// @org.kie.dmn.model.api.GwtIncompatible
 public class FEELCodeMarshaller
         implements FEELMarshaller<String> {
 

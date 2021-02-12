@@ -28,6 +28,7 @@ import org.kie.dmn.feel.util.EvalHelper;
 
 import java.util.*;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ContextNode
         extends BaseNode {
 

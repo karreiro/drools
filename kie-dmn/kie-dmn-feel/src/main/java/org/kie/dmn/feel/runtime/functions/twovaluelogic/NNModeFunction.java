@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NNModeFunction
         extends BaseFEELFunction {
     public static final NNModeFunction INSTANCE = new NNModeFunction();

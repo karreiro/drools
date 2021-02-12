@@ -29,6 +29,7 @@ import org.kie.dmn.feel.runtime.events.FEELEventBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class DTInvokerFunction
         extends BaseFEELFunction {
     private static final Logger logger = LoggerFactory.getLogger( DTInvokerFunction.class );

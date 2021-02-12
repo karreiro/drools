@@ -25,6 +25,7 @@ import org.kie.dmn.feel.lang.SimpleType;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class InstanceOfNode
         extends BaseNode {
 

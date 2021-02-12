@@ -33,6 +33,7 @@ import org.kie.dmn.feel.util.Msg;
 
 import static com.github.javaparser.StaticJavaParser.parseType;
 
+@org.kie.dmn.model.api.GwtIncompatible
 public class FunctionDefs {
 
     public static Expression asMethodCall(
