@@ -27,6 +27,7 @@ import java.util.List;
 
 import org.kie.dmn.feel.util.TypeUtil;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ComparablePeriod implements Comparable<ChronoPeriod>, ChronoPeriod {
     private final int left;
     private final String toStringRep;

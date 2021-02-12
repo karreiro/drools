@@ -19,6 +19,7 @@ package org.kie.dmn.feel.runtime.functions;
 import java.util.stream.Stream;
 
 import org.kie.dmn.feel.runtime.FEELFunction;
+import org.kie.dmn.model.api.GwtIncompatible;
 import org.kie.dmn.feel.runtime.functions.interval.AfterFunction;
 import org.kie.dmn.feel.runtime.functions.interval.BeforeFunction;
 import org.kie.dmn.feel.runtime.functions.interval.CoincidesFunction;
@@ -34,6 +35,7 @@ import org.kie.dmn.feel.runtime.functions.interval.OverlapsFunction;
 import org.kie.dmn.feel.runtime.functions.interval.StartedByFunction;
 import org.kie.dmn.feel.runtime.functions.interval.StartsFunction;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class BuiltInFunctions {
 
     protected static final FEELFunction[] FUNCTIONS = new FEELFunction[]{
@@ -101,7 +103,7 @@ public class BuiltInFunctions {
             WeekOfYearFunction.INSTANCE,
             
             IsFunction.INSTANCE,
-            
+
             // Interval based logic
             AfterFunction.INSTANCE,
             BeforeFunction.INSTANCE,
@@ -123,6 +125,7 @@ public class BuiltInFunctions {
         return FUNCTIONS;
     }
 
+    @GwtIncompatible
     public static <T extends FEELFunction> T getFunction( Class<T> functionClazz ) {
         return (T) Stream.of( FUNCTIONS )
                 .filter( f -> functionClazz.isAssignableFrom( f.getClass() ) )

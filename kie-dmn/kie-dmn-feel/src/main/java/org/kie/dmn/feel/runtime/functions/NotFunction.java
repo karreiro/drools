@@ -24,6 +24,7 @@ import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
  * it doubles both as a function and as a unary
  * test.
  */
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NotFunction
         extends BaseFEELFunction {
 

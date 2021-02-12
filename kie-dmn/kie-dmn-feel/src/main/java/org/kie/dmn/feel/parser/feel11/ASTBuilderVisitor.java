@@ -60,6 +60,7 @@ import org.kie.dmn.feel.parser.feel11.FEEL_1_1Parser.RelExpressionValueContext;
 import org.kie.dmn.feel.parser.feel11.FEEL_1_1Parser.TypeContext;
 import org.kie.dmn.feel.util.EvalHelper;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ASTBuilderVisitor
         extends FEEL_1_1BaseVisitor<BaseNode> {
     

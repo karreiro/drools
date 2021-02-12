@@ -22,6 +22,7 @@ import java.math.MathContext;
 import org.kie.dmn.api.feel.runtime.events.FEELEvent.Severity;
 import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ModuloFunction
         extends BaseFEELFunction {
     public static final ModuloFunction INSTANCE = new ModuloFunction();
