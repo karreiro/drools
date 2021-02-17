@@ -49,14 +49,14 @@ import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.feel.runtime.Range;
 import org.kie.dmn.feel.runtime.Range.RangeBoundary;
-//import org.kie.dmn.model.api.GwtIncompatible;
+import org.kie.dmn.model.api.GwtIncompatible;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 
 public class EvalHelper {
 //    public static final Logger LOG = LoggerFactory.getLogger( EvalHelper.class );
 
-////    @GwtIncompatible
+    @GwtIncompatible
     private static final Map<String, Method> accessorCache = new ConcurrentHashMap<>();
 
     public static String normalizeVariableName(String name) {
@@ -450,7 +450,7 @@ public class EvalHelper {
      * @param field
      * @return
      */
-//    @GwtIncompatible
+    @GwtIncompatible
     public static Method getGenericAccessor(Class<?> clazz, String field) {
 //        LOG.trace( "getGenericAccessor({}, {})", clazz, field );
 
@@ -467,7 +467,7 @@ public class EvalHelper {
             .orElse( getAccessor( clazz, field ) ));
     }
 
-//    @GwtIncompatible
+    @GwtIncompatible
     public static void clearGenericAccessorCache() {
         accessorCache.clear();
     }
@@ -478,7 +478,7 @@ public class EvalHelper {
      * @param field
      * @return
      */
-//    @GwtIncompatible
+    @GwtIncompatible
     public static Method getAccessor(Class<?> clazz, String field) {
 //        LOG.trace( "getAccessor({}, {})", clazz, field );
         try {
@@ -499,7 +499,7 @@ public class EvalHelper {
     /**
      * Inverse of {@link #getAccessor(Class, String)}
      */
-//    @GwtIncompatible
+    @GwtIncompatible
     public static Optional<String> propertyFromAccessor(Method accessor) {
         if ( accessor.getParameterCount() != 0 || accessor.getReturnType().equals( Void.class ) ) {
             return Optional.empty();

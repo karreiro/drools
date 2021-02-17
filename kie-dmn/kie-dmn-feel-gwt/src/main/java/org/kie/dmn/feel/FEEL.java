@@ -28,7 +28,7 @@ import org.kie.dmn.feel.lang.FEELProfile;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.impl.FEELImpl;
 import org.kie.dmn.feel.runtime.UnaryTest;
-//import org.kie.dmn.model.api.GwtIncompatible;
+import org.kie.dmn.model.api.GwtIncompatible;
 
 /**
  * FEEL expression language engine interface
@@ -147,7 +147,7 @@ public interface FEEL {
      * Evaluates the given compiled FEEL expression using the
      * given EvaluationContext, and returns the result
      *
-     * @param expr a FEEL expression
+     * @param expression a FEEL expression
      * @param ctx the EvaluationContext to be used for defining
      *            input variables and additional feel event listeners
      *            contextual to this method call

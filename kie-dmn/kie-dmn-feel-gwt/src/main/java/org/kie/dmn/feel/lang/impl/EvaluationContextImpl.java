@@ -29,7 +29,7 @@ import org.kie.dmn.api.feel.runtime.events.FEELEvent;
 import org.kie.dmn.api.feel.runtime.events.FEELEventListener;
 import org.kie.dmn.feel.lang.EvaluationContext;
 import org.kie.dmn.feel.util.EvalHelper;
-//import org.kie.dmn.model.api.GwtIncompatible;
+import org.kie.dmn.model.api.GwtIncompatible;
 
 public class EvaluationContextImpl implements EvaluationContext {
 
@@ -182,7 +182,7 @@ public class EvaluationContextImpl implements EvaluationContext {
     }
 
     @Override
-//    @GwtIncompatible
+    @GwtIncompatible
     public ClassLoader getRootClassLoader() {
         return null;
     }
