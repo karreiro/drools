@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 import org.kie.dmn.feel.lang.Type;
 
 public class FunctionOverrideVariation
-        implements ISomeInterface {
+        implements HumanReadable {
 
     private final Type returnType;
     private String functionName;
@@ -69,7 +69,7 @@ public class FunctionOverrideVariation
 
         final Iterator<Parameter> iterator = parameters.iterator();
 
-        int i = 0;
+        int i = 1;
         while (iterator.hasNext()) {
             iterator.next(); // currently we ignore the content
 
