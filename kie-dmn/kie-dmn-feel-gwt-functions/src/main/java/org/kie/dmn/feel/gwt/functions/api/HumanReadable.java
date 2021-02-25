@@ -15,7 +15,7 @@
  */
 package org.kie.dmn.feel.gwt.functions.api;
 
-public interface ISomeInterface {
+public interface HumanReadable {
 
     String toHumanReadableString();
 }

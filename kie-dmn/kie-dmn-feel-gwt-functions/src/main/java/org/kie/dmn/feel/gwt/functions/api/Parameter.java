@@ -18,7 +18,7 @@ package org.kie.dmn.feel.gwt.functions.api;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 
 public class Parameter
-        implements ISomeInterface {
+        implements HumanReadable {
 
     private final String name;
     private final BuiltInType type;
@@ -39,8 +39,6 @@ public class Parameter
 
     @Override
     public String toHumanReadableString() {
-        final StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(name).append(":").append(type);
-        return stringBuilder.toString();
+        return name;
     }
 }
