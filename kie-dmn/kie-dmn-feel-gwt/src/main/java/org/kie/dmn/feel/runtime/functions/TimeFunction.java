@@ -37,6 +37,7 @@ public class TimeFunction
         extends BaseFEELFunction {
 
     public static final DateTimeFormatter FEEL_TIME;
+    public static final TimeFunction INSTANCE = new TimeFunction();
 
     static {
         FEEL_TIME = new DateTimeFormatterBuilder().parseCaseInsensitive()

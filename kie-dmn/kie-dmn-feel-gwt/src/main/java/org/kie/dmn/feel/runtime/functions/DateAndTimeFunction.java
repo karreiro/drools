@@ -30,6 +30,7 @@ import java.time.temporal.TemporalAccessor;
 import java.time.temporal.TemporalQueries;
 
 import org.kie.dmn.api.feel.runtime.events.FEELEvent.Severity;
+import org.kie.dmn.feel.runtime.FEELFunction;
 import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 
 public class DateAndTimeFunction
@@ -37,6 +38,8 @@ public class DateAndTimeFunction
 
     public static final DateTimeFormatter FEEL_DATE_TIME;
     public static final DateTimeFormatter REGION_DATETIME_FORMATTER;
+    public static final DateAndTimeFunction INSTANCE = new DateAndTimeFunction();
+
     static {
         FEEL_DATE_TIME = new DateTimeFormatterBuilder().parseCaseInsensitive()
                                                        .append(DateFunction.FEEL_DATE)

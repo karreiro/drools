@@ -37,22 +37,24 @@ public class DateFunction
 
     public static final RegExp BEGIN_YEAR = RegExp.compile("^-?(([1-9]\\d\\d\\d+)|(0\\d\\d\\d))-"); // FEEL spec, "specified by XML Schema Part 2 Datatypes", hence: yearFrag ::= '-'? (([1-9] digit digit digit+)) | ('0' digit digit digit))
     public static final DateTimeFormatter FEEL_DATE;
+    public static final DateFunction INSTANCE = new DateFunction();
+
     static {
         FEEL_DATE = new DateTimeFormatterBuilder().appendValue(YEAR, 4, 9, SignStyle.NORMAL)
-                                                  .appendLiteral('-')
-                                                  .appendValue(MONTH_OF_YEAR, 2)
-                                                  .appendLiteral('-')
-                                                  .appendValue(DAY_OF_MONTH, 2)
-                                                  .toFormatter()
-                                                  .withResolverStyle(ResolverStyle.STRICT);
+                .appendLiteral('-')
+                .appendValue(MONTH_OF_YEAR, 2)
+                .appendLiteral('-')
+                .appendValue(DAY_OF_MONTH, 2)
+                .toFormatter()
+                .withResolverStyle(ResolverStyle.STRICT);
     }
 
     public DateFunction() {
         super(FEELConversionFunctionNames.DATE);
     }
 
-    public FEELFnResult<TemporalAccessor> invoke(@ParameterName( "from" ) String val) {
-        if ( val == null ) {
+    public FEELFnResult<TemporalAccessor> invoke(@ParameterName("from") String val) {
+        if (val == null) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "from", "cannot be null"));
         }
         if (BEGIN_YEAR.exec(val) == null) { // please notice the regex strictly requires the beginning, so we can use find.
@@ -66,31 +68,31 @@ public class DateFunction
         }
     }
 
-    public FEELFnResult<TemporalAccessor> invoke(@ParameterName( "year" ) Number year, @ParameterName( "month" ) Number month, @ParameterName( "day" ) Number day) {
-        if ( year == null ) {
+    public FEELFnResult<TemporalAccessor> invoke(@ParameterName("year") Number year, @ParameterName("month") Number month, @ParameterName("day") Number day) {
+        if (year == null) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "year", "cannot be null"));
         }
-        if ( month == null ) {
+        if (month == null) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "month", "cannot be null"));
         }
-        if ( day == null ) {
+        if (day == null) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "day", "cannot be null"));
         }
 
         try {
-            return FEELFnResult.ofResult( LocalDate.of( year.intValue(), month.intValue(), day.intValue() ) );
+            return FEELFnResult.ofResult(LocalDate.of(year.intValue(), month.intValue(), day.intValue()));
         } catch (DateTimeException e) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "input parameters date-parsing exception", e));
         }
     }
 
-    public FEELFnResult<TemporalAccessor> invoke(@ParameterName( "from" ) TemporalAccessor date) {
-        if ( date == null ) {
+    public FEELFnResult<TemporalAccessor> invoke(@ParameterName("from") TemporalAccessor date) {
+        if (date == null) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "from", "cannot be null"));
         }
 
         try {
-            return FEELFnResult.ofResult( LocalDate.from( date ) );
+            return FEELFnResult.ofResult(LocalDate.from(date));
         } catch (DateTimeException e) {
             return FEELFnResult.ofError(new InvalidParametersEvent(Severity.ERROR, "from", "date-parsing exception", e));
         }

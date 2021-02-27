@@ -19,20 +19,9 @@ package org.kie.dmn.feel.runtime.functions.extended;
 import java.util.stream.Stream;
 
 import org.kie.dmn.feel.runtime.FEELFunction;
-import org.kie.dmn.feel.runtime.functions.interval.AfterFunction;
-import org.kie.dmn.feel.runtime.functions.interval.BeforeFunction;
-import org.kie.dmn.feel.runtime.functions.interval.CoincidesFunction;
-import org.kie.dmn.feel.runtime.functions.interval.DuringFunction;
-import org.kie.dmn.feel.runtime.functions.interval.FinishedByFunction;
-import org.kie.dmn.feel.runtime.functions.interval.FinishesFunction;
-import org.kie.dmn.feel.runtime.functions.interval.IncludesFunction;
-import org.kie.dmn.feel.runtime.functions.interval.MeetsFunction;
-import org.kie.dmn.feel.runtime.functions.interval.MetByFunction;
-import org.kie.dmn.feel.runtime.functions.interval.OverlapsAfterFunction;
-import org.kie.dmn.feel.runtime.functions.interval.OverlapsBeforeFunction;
-import org.kie.dmn.feel.runtime.functions.interval.OverlapsFunction;
-import org.kie.dmn.feel.runtime.functions.interval.StartedByFunction;
-import org.kie.dmn.feel.runtime.functions.interval.StartsFunction;
+import org.kie.dmn.feel.runtime.functions.DateFunction;
+import org.kie.dmn.feel.runtime.functions.TimeFunction;
+import org.kie.dmn.feel.runtime.functions.DurationFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNAllFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNAnyFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNCountFunction;
@@ -41,6 +30,7 @@ import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNMeanFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNMedianFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNMinFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNModeFunction;
+import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNStddevFunction;
 import org.kie.dmn.feel.runtime.functions.twovaluelogic.NNSumFunction;
 import org.kie.dmn.model.api.GwtIncompatible;
 
@@ -50,8 +40,9 @@ import org.kie.dmn.model.api.GwtIncompatible;
 public class KieExtendedDMNFunctions {
 
     protected static final FEELFunction[] FUNCTIONS = new FEELFunction[]{
-//                                                                         TimeFunction.INSTANCE,
-//                                                                         DateFunction.INSTANCE,
+
+            TimeFunction.INSTANCE,
+            DateFunction.INSTANCE,
             DurationFunction.INSTANCE,
 
             // additional functions not part of the spec version 1.1
@@ -69,27 +60,50 @@ public class KieExtendedDMNFunctions {
 //            NNMedianFunction.INSTANCE,
             NNMinFunction.INSTANCE,
             NNModeFunction.INSTANCE,
-//                                                                        NNStddevFunction.INSTANCE,
+//            NNStddevFunction.INSTANCE,
             NNSumFunction.INSTANCE,
 
-            // Interval based logic
-            AfterFunction.INSTANCE,
-            BeforeFunction.INSTANCE,
-            CoincidesFunction.INSTANCE,
-            StartsFunction.INSTANCE,
-            StartedByFunction.INSTANCE,
-            FinishesFunction.INSTANCE,
-            FinishedByFunction.INSTANCE,
-            DuringFunction.INSTANCE,
-            IncludesFunction.INSTANCE,
-            OverlapsFunction.INSTANCE,
-//                                                                        OverlappedByFunction.INSTANCE, ?
-            OverlapsBeforeFunction.INSTANCE,
-//                                                                        OverlappedBeforeByFunction.INSTANCE, ?
-            OverlapsAfterFunction.INSTANCE,
-//                                                                        OverlappedAfterByFunction.INSTANCE, ?
-            MeetsFunction.INSTANCE,
-            MetByFunction.INSTANCE
+            //===
+////                                                                         TimeFunction.INSTANCE,
+////                                                                         DateFunction.INSTANCE,
+//            DurationFunction.INSTANCE,
+//
+//            // additional functions not part of the spec version 1.1
+//            new NowFunction(),
+//            new TodayFunction(),
+//            new CodeFunction(),
+//            new InvokeFunction(),
+//
+//            // CQL based, two value logic functions
+//            NNAnyFunction.INSTANCE,
+//            NNAllFunction.INSTANCE,
+//            NNCountFunction.INSTANCE,
+//            NNMaxFunction.INSTANCE,
+//            NNMeanFunction.INSTANCE,
+////            NNMedianFunction.INSTANCE,
+//            NNMinFunction.INSTANCE,
+//            NNModeFunction.INSTANCE,
+////                                                                        NNStddevFunction.INSTANCE,
+//            NNSumFunction.INSTANCE,
+//
+//            // Interval based logic
+//            AfterFunction.INSTANCE,
+//            BeforeFunction.INSTANCE,
+//            CoincidesFunction.INSTANCE,
+//            StartsFunction.INSTANCE,
+//            StartedByFunction.INSTANCE,
+//            FinishesFunction.INSTANCE,
+//            FinishedByFunction.INSTANCE,
+//            DuringFunction.INSTANCE,
+//            IncludesFunction.INSTANCE,
+//            OverlapsFunction.INSTANCE,
+////                                                                        OverlappedByFunction.INSTANCE, ?
+//            OverlapsBeforeFunction.INSTANCE,
+////                                                                        OverlappedBeforeByFunction.INSTANCE, ?
+//            OverlapsAfterFunction.INSTANCE,
+////                                                                        OverlappedAfterByFunction.INSTANCE, ?
+//            MeetsFunction.INSTANCE,
+//            MetByFunction.INSTANCE
     };
 
     public static FEELFunction[] getFunctions() {
