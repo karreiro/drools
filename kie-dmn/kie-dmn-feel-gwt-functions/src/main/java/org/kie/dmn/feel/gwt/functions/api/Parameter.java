@@ -39,6 +39,6 @@ public class Parameter
 
     @Override
     public String toHumanReadableString() {
-        return name;
+        return type.getName();
     }
 }
