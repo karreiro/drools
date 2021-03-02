@@ -15,6 +15,7 @@ public class FunctionProviderGenerator
     public String generate(final TreeLogger logger,
                            final GeneratorContext context,
                            final String requestedClass) throws UnableToCompleteException {
+
         final TypeOracle typeOracle = context.getTypeOracle();
         final JClassType functionType = typeOracle.findType(requestedClass);
         assert FEELFunctionProvider.class.equals(functionType.getClass());

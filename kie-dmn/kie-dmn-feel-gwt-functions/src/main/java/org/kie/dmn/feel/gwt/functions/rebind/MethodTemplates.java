@@ -17,6 +17,7 @@ import org.kie.dmn.feel.runtime.functions.ModeFunction;
 import org.kie.dmn.feel.runtime.functions.ParameterName;
 import org.kie.dmn.feel.runtime.functions.ReplaceFunction;
 import org.kie.dmn.feel.runtime.functions.TimeFunction;
+import org.kie.dmn.feel.runtime.functions.extended.KieExtendedDMNFunctions;
 
 public class MethodTemplates {
 
@@ -24,6 +25,10 @@ public class MethodTemplates {
         final List<String> result = new ArrayList<>();
 
         for (final FEELFunction function : BuiltInFunctions.getFunctions()) {
+            result.addAll(getFunctionSignatures(function));
+        }
+
+        for (final FEELFunction function : KieExtendedDMNFunctions.getFunctions()) {
             result.addAll(getFunctionSignatures(function));
         }
 
