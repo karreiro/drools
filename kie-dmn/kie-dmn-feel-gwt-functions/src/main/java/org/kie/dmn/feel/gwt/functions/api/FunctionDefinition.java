@@ -15,14 +15,10 @@
  */
 package org.kie.dmn.feel.gwt.functions.api;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
-import org.kie.dmn.feel.lang.types.BuiltInType;
 
 public class FunctionDefinition {
 
@@ -41,31 +37,5 @@ public class FunctionDefinition {
 
     public Set<FunctionOverrideVariation> getVariations() {
         return Collections.unmodifiableSet(variations);
-    }
-
-    public List<FunctionDefinitionStrings> toHumanReadableStrings() {
-        final ArrayList<FunctionDefinitionStrings> result = new ArrayList<>();
-
-        int i = 0;
-        for (FunctionOverrideVariation variation : variations) {
-
-            final StringBuilder humanReadableBuilder = new StringBuilder();
-            final StringBuilder templateBuilder = new StringBuilder();
-
-            humanReadableBuilder.append(name);
-            templateBuilder.append(name);
-            humanReadableBuilder.append("(");
-            templateBuilder.append("(");
-            humanReadableBuilder.append(variation.toHumanReadableString());
-            templateBuilder.append("$");
-            templateBuilder.append(i);
-            humanReadableBuilder.append(")");
-            templateBuilder.append(")");
-
-            result.add(new FunctionDefinitionStrings(humanReadableBuilder.toString(),
-                                                     templateBuilder.toString()));
-        }
-
-        return result;
     }
 }

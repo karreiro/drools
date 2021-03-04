@@ -21,7 +21,25 @@ import org.kie.dmn.feel.runtime.functions.extended.KieExtendedDMNFunctions;
 
 public class MethodTemplates {
 
-    public List<String> getAll() {
+    public static String getTemplate() {
+        final StringBuilder builder = new StringBuilder();
+
+        builder.append("public List<FunctionOverrideVariation> getDefinitions() {\n");
+        builder.append("    ArrayList definitions = new ArrayList();\n");
+
+        for (final String template : getAll()) {
+
+            builder.append(String.format("definitions.add( %s );\n",
+                                         template));
+        }
+
+        builder.append("return definitions;\n");
+        builder.append("}");
+
+        return builder.toString();
+    }
+
+    private static List<String> getAll() {
         final List<String> result = new ArrayList<>();
 
         for (final FEELFunction function : BuiltInFunctions.getFunctions()) {
@@ -35,7 +53,7 @@ public class MethodTemplates {
         return result;
     }
 
-    public List<String> getFunctionSignatures(final FEELFunction function) {
+    private static List<String> getFunctionSignatures(final FEELFunction function) {
 
         final List<String> result = new ArrayList<>();
 
@@ -78,7 +96,7 @@ public class MethodTemplates {
         return result;
     }
 
-    protected String getParameterNameAnnotation(final Annotation[] parameterAnnotation) {
+    private static String getParameterNameAnnotation(final Annotation[] parameterAnnotation) {
         for (Annotation annotation : parameterAnnotation) {
             if (annotation instanceof ParameterName) {
                 return ((ParameterName) annotation).value();
@@ -87,8 +105,8 @@ public class MethodTemplates {
         return "";
     }
 
-    private String getReturnType(final FEELFunction function,
-                                 final Type genericReturnType) {
+    private static String getReturnType(final FEELFunction function,
+                                        final Type genericReturnType) {
 
         if (genericReturnType instanceof ParameterizedType) {
             final Type[] actualTypeArguments = ((ParameterizedType) genericReturnType).getActualTypeArguments();
@@ -123,7 +141,7 @@ public class MethodTemplates {
         return "BuiltInType.UNKNOWN";
     }
 
-    private String getType(final String typeName) {
+    private static String getType(final String typeName) {
         if (typeName.equals("java.time.temporal.TemporalAmount")) {
             return "BuiltInType.DURATION";
         } else if (typeName.equals("java.lang.String")) {
