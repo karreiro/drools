@@ -48,38 +48,8 @@ class FileCreator {
     }
 
     void write() {
-        writeGetDefinitions();
+        sourceWriter.print(MethodTemplates.getTemplate());
 
         sourceWriter.commit(logger);
     }
-
-    private void writeGetDefinitions() {
-        sourceWriter.println("public List<FunctionOverrideVariation> getDefinitions() {");
-        sourceWriter.println("    ArrayList definitions = new ArrayList();");
-
-        for (String template : new MethodTemplates().getAll()) {
-
-            sourceWriter.println("definitions.add( %s );",
-                                 template);
-        }
-
-//        for (final FEELFunction function : BuiltInFunctions.getFunctions()) {
-//
-////            getMethodddddddddds(function);
-//
-//            sourceWriter.println("definitions.add( new FunctionDefinition( \"%s\", %s, new FunctionOverrideVariation() ) );",
-//                                 function.getName(),
-//                                 getMethodReturnType());
-//        }
-
-        // TODO override variations
-        sourceWriter.println("return definitions;");
-        sourceWriter.println("}");
-    }
-//
-//    private String getMethodReturnType() {
-//        return "BuiltInType.BOOLEAN";
-//
-////        return "Type.BOOLEAN";
-//    }
 }
