@@ -46,6 +46,7 @@ import org.kie.dmn.feel.util.EvalHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class ParserHelper {
     public static final Logger LOG = LoggerFactory.getLogger(ParserHelper.class);
 

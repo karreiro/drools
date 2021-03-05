@@ -39,6 +39,7 @@ import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.feel.util.EvalHelper;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class InfixOpNode
         extends BaseNode {
 

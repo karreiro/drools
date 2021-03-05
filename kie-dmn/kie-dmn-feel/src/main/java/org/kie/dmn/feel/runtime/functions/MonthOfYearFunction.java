@@ -24,6 +24,7 @@ import java.util.Locale;
 import org.kie.dmn.api.feel.runtime.events.FEELEvent.Severity;
 import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class MonthOfYearFunction extends BaseFEELFunction {
     public static final MonthOfYearFunction INSTANCE = new MonthOfYearFunction();
 

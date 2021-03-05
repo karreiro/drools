@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2019 Red Hat, Inc. and/or its affiliates.
  *
@@ -22,6 +23,7 @@ import java.time.temporal.TemporalAccessor;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.util.EvalHelper;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class IsFunction extends BaseFEELFunction {
     public static final IsFunction INSTANCE = new IsFunction();
 

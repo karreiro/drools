@@ -5,6 +5,7 @@ import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 
 import java.math.BigDecimal;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class EvenFunction 
         extends BaseFEELFunction {
     public static final EvenFunction INSTANCE = new EvenFunction();

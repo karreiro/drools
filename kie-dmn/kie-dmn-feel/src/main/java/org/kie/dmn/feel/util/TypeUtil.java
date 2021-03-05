@@ -39,6 +39,7 @@ import org.kie.dmn.feel.runtime.functions.DateAndTimeFunction;
 import org.kie.dmn.feel.runtime.functions.DateFunction;
 import org.kie.dmn.feel.runtime.functions.TimeFunction;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public final class TypeUtil {
 
     private static final long SECONDS_IN_A_MINUTE = 60;

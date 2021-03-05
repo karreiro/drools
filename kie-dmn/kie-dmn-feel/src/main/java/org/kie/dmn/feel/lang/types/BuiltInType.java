@@ -43,6 +43,7 @@ import org.kie.dmn.feel.runtime.FEELFunction;
 import org.kie.dmn.feel.runtime.Range;
 import org.kie.dmn.feel.runtime.UnaryTest;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public enum BuiltInType implements SimpleType {
 
     UNKNOWN(SimpleType.ANY, "unknown", "any"), // updated FEEL lattice of types from DMN v1.2

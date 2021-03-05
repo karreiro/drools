@@ -24,6 +24,7 @@ import org.kie.dmn.api.feel.runtime.events.FEELEvent.Severity;
 import org.kie.dmn.feel.lang.types.impl.InterceptNotComparableComparator;
 import org.kie.dmn.feel.runtime.events.InvalidParametersEvent;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class MinFunction
         extends BaseFEELFunction {
 

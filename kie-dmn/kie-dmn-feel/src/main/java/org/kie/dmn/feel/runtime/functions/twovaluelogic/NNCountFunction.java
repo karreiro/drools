@@ -23,6 +23,7 @@ import org.kie.dmn.feel.runtime.functions.ParameterName;
 import java.math.BigDecimal;
 import java.util.List;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class NNCountFunction
         extends BaseFEELFunction {
 

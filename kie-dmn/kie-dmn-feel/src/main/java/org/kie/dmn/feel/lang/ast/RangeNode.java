@@ -28,6 +28,7 @@ import org.kie.dmn.feel.runtime.Range;
 import org.kie.dmn.feel.runtime.impl.RangeImpl;
 import org.kie.dmn.feel.util.Msg;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class RangeNode
         extends BaseNode {
 

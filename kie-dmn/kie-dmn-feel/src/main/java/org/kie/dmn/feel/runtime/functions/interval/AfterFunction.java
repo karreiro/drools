@@ -27,6 +27,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+// @org.kie.dmn.model.api.GwtIncompatible
 public class AfterFunction
         extends BaseFEELFunction {
 
