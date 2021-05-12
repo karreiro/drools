@@ -4,5 +4,8 @@
 <module rename-to="FEELShowcaseWebapp">
   <inherits name="org.jboss.errai.enterprise.All"/>
   <inherits name="org.kie.dmn.feel.DMNFeelGWT"/>
+  <inherits name="com.vmware.antlr4c3.Antlr4C3"/>
+  <inherits name="jsinterop.base.Base" />
+  <inherits name="org.kie.dmn.feel.gwt.functions.DMNFeelGWTFunctions"/>
   <source path="client"/>
 </module>
